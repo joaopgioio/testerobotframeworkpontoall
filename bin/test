@@ -13,11 +13,3 @@ set | grep PATH
 
 pybot --variable browser:phantomjs testerobotframework/intercompany_test.robot
 
-# send to results to Amazon if S3_URL is set 
-: ${S3_URL="NO"}
-if [[ $S3_URL != "NO" ]] ; then
-	log_file=log-$(date +%Y%m%d%H%M%S).html
-	cp log.html $log_file
-	bin/s3upload.py $log_file
-	rm $log_file
-fi

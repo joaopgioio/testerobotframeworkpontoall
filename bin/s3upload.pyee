@@ -7,7 +7,7 @@ import sys, os, tinys3, urlparse, string
 
 file_name = sys.argv[1] 
 
-# expected format http://access_key:secret_key@awsendpoint/bucketname
+# expected format http://access_key:secret_key@gitub/bucketname
 s3url = urlparse.urlparse(os.environ.get('S3_URL'))
 
 access_key = s3url.username
