@@ -1,8 +1,9 @@
 *** Settings ***
 Documentation     Esse é o teste para o site da intercompany
 Resource          intercompany_resources.robot
-Test Setup        Abrir o navegador
+Test Setup        Abrir o navegador    ${LOGIN URL}     ${BROWSER}  
 Test Teardown     Fechar o navegador
+
 
 
 
@@ -18,8 +19,8 @@ Caso de Teste 1 - Validar Login
     [Documentation]  Esse teste verifica se o usuário foi logado com sucesso
     ...              utilizando o usuário válido joao@gioio.com.br
     [Tags]           login
-    Inserir Usuario
-    Inserir Senha
+    Inserir Usuario    ${username}
+    Inserir Senha      ${password} 
     Clicar no Botao para login
     Validar se o usuario foi logado com sucesso
     # Welcome Page Should Be Open

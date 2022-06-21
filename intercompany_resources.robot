@@ -5,13 +5,16 @@ Library           SeleniumLibrary
 *** Keywords ***
 
 Abrir o navegador
+    [Arguments]     ${LOGIN URL}    ${BROWSER}
     Open Browser    ${LOGIN URL}    ${BROWSER}
     Title Should Be    Intercompany
 
 Inserir Usuario
+    [Arguments]     ${username}
     Input Text    user-name    ${username}
 
 Inserir Senha
+    [Arguments]     ${password}
     Input Text    user-password    ${password}
 
 Clicar no Botao para login
