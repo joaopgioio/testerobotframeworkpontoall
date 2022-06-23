@@ -11,6 +11,7 @@ export PYTHONPATH="$HOME:$PYTHONPATH"
 
 # check that PATH was updated
 set | grep PATH
+mkdir result
 # echo "Running phantomjs from" `which phantomjs`
 # echo "Phantomjs version: " `phantomjs --version`
 
