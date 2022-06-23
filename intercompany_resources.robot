@@ -6,7 +6,7 @@ Library           Selenium2Library
 
 Abrir o navegador
     [Arguments]     ${LOGIN URL}    ${BROWSER}
-    Open Browser    ${LOGIN URL}    ${BROWSER}
+    Open Browser    ${LOGIN URL}    ${BROWSER}    executable_path:./webdriver/chromedriver.exe
     Title Should Be    Intercompany
 
 Inserir Usuario
