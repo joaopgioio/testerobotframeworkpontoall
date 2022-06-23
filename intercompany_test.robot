@@ -9,10 +9,11 @@ Test Teardown     Fechar o navegador
 
 *** Variables ***
 #${LOGIN URL}      http://localhost:3000/intercompany/index.php
-${LOGIN URL}      https://intercompany.herokuapp.com/index.php
-${BROWSER}        Chrome
-${username}       joao@gioio.com.br
-${password}       123
+${LOGIN URL}       https://intercompany.herokuapp.com/index.php
+${BROWSER}         Chrome
+${chromedriver}    /webdriver/chromedriver.exe       
+${username}        joao@gioio.com.br
+${password}        123
 
 *** Test Cases ***
 Caso de Teste 1 - Validar Login

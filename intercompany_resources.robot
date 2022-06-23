@@ -1,12 +1,15 @@
 *** Settings ***
 Library           Selenium2Library
+Library           OperatingSystem
 
 
 *** Keywords ***
 
 Abrir o navegador
-    [Arguments]     ${LOGIN URL}    ${BROWSER}
+    [Arguments]     ${LOGIN URL}    ${BROWSER}    ${chromedriver}
     Open Browser    ${LOGIN URL}    ${BROWSER}    executable_path:./webdriver/chromedriver.exe
+    Append To Environment Variable      PATH      ./webdriver/chromedriver.exe
+    Create Webdriver     Chrome     executable_path=${chromedriver}
     Title Should Be    Intercompany
 
 Inserir Usuario
