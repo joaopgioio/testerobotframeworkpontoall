@@ -4,6 +4,7 @@
 echo "Setting HEROKU environment for chromedriver binary: "
 #export PATH="$PATH:$HOME/vendor/phantomjs/bin/"
 export PATH="$PATH:$HOME/.chromedriver/bin"
+export PATH="$PATH:$HOME/result"
 #export PATH="$PATH:$HOME/webdriver"
 # your own made Robot libraries add them eg. here
 export PYTHONPATH="$HOME:$PYTHONPATH"
