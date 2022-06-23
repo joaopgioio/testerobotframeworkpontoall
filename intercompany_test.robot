@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     Esse é o teste para o site da intercompany
 Resource          intercompany_resources.robot
-Test Setup        Abrir o navegador    ${LOGIN URL}     ${BROWSER}    ${chromedriver} 
+Test Setup        Abrir o navegador    ${LOGIN URL}     ${BROWSER} 
 Test Teardown     Fechar o navegador
 
 
