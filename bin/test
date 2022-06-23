@@ -2,7 +2,7 @@
 
 # set phantomjs to PATH
 echo "Setting HEROKU environment for phantomjs binary: "
-export PATH="$PATH:$HOME/vendor/phantomjs/bin/"
+export PATH="$PATH:$HOME/vendor/chromedriver/bin/"
 # your own made Robot libraries add them eg. here
 export PYTHONPATH="./RobotLibs/:$PYTHONPATH"
 
@@ -12,5 +12,5 @@ ls /app/vendor/
 # echo "Running phantomjs from" `which phantomjs`
 # echo "Phantomjs version: " `phantomjs --version`
 
-robot --variable browser:phantomjs ./intercompany_test.robot
+robot --variable browser:chromedriver ./intercompany_test.robot
 
