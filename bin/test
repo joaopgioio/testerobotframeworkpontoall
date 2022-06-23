@@ -13,6 +13,6 @@ set | grep PATH
 # echo "Running phantomjs from" `which phantomjs`
 # echo "Phantomjs version: " `phantomjs --version`
 
-pybot --variable browser:phantomjs ./intercompany_test.robot
+robot --variable browser:phantomjs ./intercompany_test.robot
 #robot ./intercompany_test.robot
 
