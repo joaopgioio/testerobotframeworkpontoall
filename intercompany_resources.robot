@@ -7,7 +7,7 @@ Library           OperatingSystem
 
 Abrir o navegador
     [Arguments]     ${LOGIN URL}    ${BROWSER}    ${chromedriver}
-    Open Browser    ${LOGIN URL}    ${BROWSER}    executable_path:./webdriver/chromedriver.exe
+    Open Browser    ${LOGIN URL}    ${BROWSER}    ${chromedriver}
     Append To Environment Variable      PATH      ./webdriver/chromedriver.exe
     Create Webdriver     Chrome     executable_path=${chromedriver}
     Title Should Be    Intercompany
