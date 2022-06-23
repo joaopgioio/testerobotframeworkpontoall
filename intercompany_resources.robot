@@ -8,7 +8,7 @@ Library           OperatingSystem
 Abrir o navegador
     [Arguments]     ${LOGIN URL}    ${NAVEGADOR_CHROMEHEADLESS} 
     Open Browser    ${LOGIN URL}    ${NAVEGADOR_CHROMEHEADLESS} 
-    Append To Environment Variable      PATH      ./webdriver/chromedriver.exe
+    #Append To Environment Variable      PATH      ./webdriver/chromedriver.exe
     Title Should Be    Intercompany
 
 Inserir Usuario
