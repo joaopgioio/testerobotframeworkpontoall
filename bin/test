@@ -12,5 +12,5 @@ set | grep PATH
 # echo "Running phantomjs from" `which phantomjs`
 # echo "Phantomjs version: " `phantomjs --version`
 
-robot --variable browser:chromedriver ./intercompany_test.robot
+robot --variable browser:chromedriver.exe ./intercompany_test.robot
 
