@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # set phantomjs to PATH
-echo "Setting HEROKU environment for phantomjs binary: "
-export PATH="$PATH:$HOME/vendor/phantomjs/bin/"
+echo "Setting HEROKU environment for headlesschrome binary: "
+export PATH="$PATH:$HOME/vendor/headlesschrome/bin/"
 # your own made Robot libraries add them eg. here
 export PYTHONPATH="./RobotLibs/:$PYTHONPATH"
 
