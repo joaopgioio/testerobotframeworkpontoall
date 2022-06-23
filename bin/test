@@ -8,7 +8,7 @@ export PYTHONPATH="./RobotLibs/:$PYTHONPATH"
 
 # check that PATH was updated
 set | grep PATH
-echo ls -ltra /app/vendor/
+ls -ltra /app/vendor/
 # echo "Running phantomjs from" `which phantomjs`
 # echo "Phantomjs version: " `phantomjs --version`
 
