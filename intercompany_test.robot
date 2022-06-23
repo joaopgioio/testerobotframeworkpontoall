@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     Esse é o teste para o site da intercompany
 Resource          intercompany_resources.robot
-Test Setup        Abrir o navegador    ${LOGIN URL}     ${NAVEGADOR_CHROMEHEADLESS} 
+Test Setup        Abrir o navegador    ${LOGIN URL}     ${BROWSER} 
 Test Teardown     Fechar o navegador
 
 
@@ -10,7 +10,7 @@ Test Teardown     Fechar o navegador
 *** Variables ***
 #${LOGIN URL}      http://localhost:3000/intercompany/index.php
 ${LOGIN URL}       https://intercompany.herokuapp.com/index.php
-#${BROWSER}         Chrome
+${BROWSER}         Chrome
 ${NAVEGADOR_CHROMEHEADLESS}     headlesschrome
 #${chromedriver}    executable_path=./webdriver/chromedriver.exe       
 ${username}        joao@gioio.com.br
