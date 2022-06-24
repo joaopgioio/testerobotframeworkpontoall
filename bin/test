@@ -16,5 +16,4 @@ mkdir result
 # echo "Phantomjs version: " `phantomjs --version`
 
 #robot --variable browser:phantomjs ./intercompany_test.robot
-robot -d app/result ./intercompany_test.robot
-
+robot -d bin/result ./intercompany_test.robot
