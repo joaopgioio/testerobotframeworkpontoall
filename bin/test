@@ -13,8 +13,9 @@ export PYTHONPATH="$HOME:$PYTHONPATH"
 set | grep PATH
 mkdir result
 cd result
+ls
 # echo "Running phantomjs from" `which phantomjs`
 # echo "Phantomjs version: " `phantomjs --version`
 
 #robot --variable browser:phantomjs ./intercompany_test.robot
-robot -d . ./intercompany_test.robot
+robot ./intercompany_test.robot
