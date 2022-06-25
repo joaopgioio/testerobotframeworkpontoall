@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     Esse é o teste para o site da intercompany
 Resource          intercompany_resources.robot
-Test Setup        Abrir o navegador    ${LOGIN URL}     ${BROWSER} 
+Test Setup        Abrir o navegador    ${LOGIN URL}     ${BROWSER}     ${OPTIONS}
 Test Teardown     Fechar o navegador
 
 
@@ -12,6 +12,8 @@ Test Teardown     Fechar o navegador
 ${LOGIN URL}       https://intercompany.herokuapp.com/index.php
 ${BROWSER}         Chrome
 ${NAVEGADOR_CHROMEHEADLESS}     headlesschrome
+### Opções necessárias para rodar headless no Linux do CI (runner)
+${OPTIONS}      add_argument("--disable-dev-shm-usage"); add_argument("--headless"); add_argument("--no-sandbox")
 #${chromedriver}    executable_path=./webdriver/chromedriver.exe       
 ${username}        joao@gioio.com.br
 ${password}        123

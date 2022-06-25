@@ -6,8 +6,8 @@ Library           OperatingSystem
 *** Keywords ***
 
 Abrir o navegador
-    [Arguments]     ${LOGIN URL}    ${BROWSER} 
-    Open Browser    ${LOGIN URL}    ${BROWSER} 
+    [Arguments]     ${LOGIN URL}    ${BROWSER}     ${OPTIONS}
+    Open Browser    ${LOGIN URL}    ${BROWSER}     ${OPTIONS}
     #Append To Environment Variable      PATH      ./webdriver/chromedriver.exe
     Title Should Be    Intercompany
 
