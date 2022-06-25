@@ -1,5 +1,5 @@
 stages:
-  - Acceptance Tests
+  - Acceptance Tests 
 
 # Job Linux Fedora - execução dos testes sem docker
 WEB Testing in Chrome:
