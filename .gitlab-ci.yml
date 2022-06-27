@@ -20,7 +20,8 @@ WEB Testing in Chrome:
         #- dnf install -y 'dnf-command(config-manager)' && dnf config-manager --set-enabled google-chrome
         #- dnf install -y google-chrome-stable
         # - pip3 install webdrivermanager  \ && webdrivermanager    chrome
-        - dnf install -y https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm >/dev/null && echo OK
+        #- dnf install -y https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm >/dev/null && echo OK
+        - dnf install -y https://kojipkgs.fedoraproject.org//vol/fedora_koji_archive04/packages/chromium/86.0.4240.111/1.fc31/x86_64/chrome-remote-desktop-86.0.4240.111-1.fc31.x86_64.rpm >/dev/null && echo OK
         - chown root /usr/bin/chromedriver >/dev/null && echo OK
         - chmod +x /usr/bin/chromedriver >/dev/null && echo OK
         - chmod 755 /usr/bin/chromedriver >/dev/null && echo OK
