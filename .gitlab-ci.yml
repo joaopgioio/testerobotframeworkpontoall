@@ -25,7 +25,7 @@ WEB Testing in Chrome:
         - python --version
         - pip3 install robotframework robotframework-seleniumlibrary | grep "Successfully installed"
     script:
-        - robot -d ./results -v BROWSER:headlesschrome intercompany_teste.robot
+        - robot -d ./results -v BROWSER:headlesschrome intercompany_test.robot
 
 # # Job Docker - execução dos testes em container Docker
 # WEB Testing in Chrome and Docker:
@@ -39,4 +39,4 @@ WEB Testing in Chrome:
 #             - ./results
 #         expire_in: 1 week
 #     script:
-#         - robot -d ./results -v BROWSER:headlesschrome intercompany_teste.robot
+#         - robot -d ./results -v BROWSER:headlesschrome intercompany_test.robot
