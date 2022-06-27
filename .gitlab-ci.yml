@@ -23,7 +23,7 @@ WEB Testing in Chrome:
         - chmod 755 /usr/bin/chromedriver >/dev/null && echo OK
         - chromedriver --version
         - python --version
-        - pip3 install robotframework robotframework-seleniumlibrary | grep "Successfully installed"
+        - pip3 install robotframework robotframework-seleniumlibrary robotframework-selenium2library | grep "Successfully installed"
     script:
         - robot -d ./results -v BROWSER:headlesschrome intercompany_test.robot
 
