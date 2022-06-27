@@ -11,9 +11,9 @@ Test Teardown     Fechar o navegador
 #${LOGIN URL}      http://localhost:3000/intercompany/index.php
 ${LOGIN URL}       https://intercompany.herokuapp.com/index.php
 ${BROWSER}         chrome
-${NAVEGADOR_CHROMEHEADLESS}     headlesschrome
+#${NAVEGADOR_CHROMEHEADLESS}     headlesschrome
 ### Opções necessárias para rodar headless no Linux do CI (runner)
-${OPTIONS}         add_argument("--disable-dev-shm-usage"); add_argument("--headless"); add_argument("--no-sandbox")
+${OPTIONS}      add_argument("--disable-dev-shm-usage"); add_argument("--headless"); add_argument("--no-sandbox")
 #${chromedriver}    executable_path=./webdriver/chromedriver.exe       
 ${username}        joao@gioio.com.br
 ${password}        123
