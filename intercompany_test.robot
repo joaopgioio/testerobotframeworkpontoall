@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     Esse é o teste para o site da intercompany
 Resource          intercompany_resources.robot
-Test Setup        Abrir o navegador    ${LOGIN URL}     ${BROWSER}     ${OPTIONS}
+Test Setup        Abrir o navegador    ${LOGIN URL}     ${BROWSER}     ${OPTIONS}    ${filename}
 Test Teardown     Fechar o navegador
 
 
@@ -17,6 +17,7 @@ ${OPTIONS}      add_argument("--disable-dev-shm-usage"); add_argument("--headles
 #${chromedriver}    executable_path=./webdriver/chromedriver.exe       
 ${username}        joao@gioio.com.br
 ${password}        123
+${filename}        selenium-screenshot-{index}.png
 
 *** Test Cases ***
 Caso de Teste 1 - Validar Login

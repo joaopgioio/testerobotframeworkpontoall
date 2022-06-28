@@ -6,24 +6,28 @@ Library           OperatingSystem
 *** Keywords ***
 
 Abrir o navegador
-    [Arguments]     ${LOGIN URL}    ${BROWSER}     ${OPTIONS}
+    [Arguments]     ${LOGIN URL}    ${BROWSER}     ${OPTIONS}    ${filename}
     Open Browser    ${LOGIN URL}    ${BROWSER}     options=${OPTIONS}
     #Append To Environment Variable      PATH      ./webdriver/chromedriver.exe
     Title Should Be    Intercompany
+    Capture Page Screenshot    filename=${filename}
 
 Inserir Usuario
-    [Arguments]     ${username}
+    [Arguments]     ${username}    ${filename}
     Input Text    user-name    ${username}
+    Capture Page Screenshot    filename=${filename}
 
 Inserir Senha
-    [Arguments]     ${password}
+    [Arguments]     ${password}    ${filename}
     Input Text    user-password    ${password}
-
+    Capture Page Screenshot    filename=${filename}
 Clicar no Botao para login
+    [Arguments]     ${filename}
     Click Button    SendLogin
-
+    Capture Page Screenshot    filename=${filename}
 Validar se o usuario foi logado com sucesso
+    [Arguments]     ${filename}
     Title Should Be    Bem vindo a Intercompany
-
+    Capture Page Screenshot    filename=${filename}
 Fechar o navegador
     Close Browser
