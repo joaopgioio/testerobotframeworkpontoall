@@ -19,7 +19,7 @@ Inserir Usuario
 Inserir Senha
     [Arguments]     ${password}        ${filename}
     Input Text    user-password    ${password}
-    Capture Page Screenshot
+    Capture Page Screenshot        ${filename}
 Clicar no Botao para login
     [Arguments]     ${filename}
     Click Button    SendLogin
