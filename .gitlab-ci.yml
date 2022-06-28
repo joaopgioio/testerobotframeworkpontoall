@@ -24,7 +24,7 @@ WEB Testing in Chrome:
         #- dnf install -y https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm >/dev/null && echo OK
         # - dnf install -y https://kojipkgs.fedoraproject.org//vol/fedora_koji_archive04/packages/chromium/86.0.4240.111/1.fc31/x86_64/chrome-remote-desktop-86.0.4240.111-1.fc31.x86_64.rpm >/dev/null && echo OK
         # - dnf install -y http://dist.control.lth.se/public/Fedora-31/x86_64/google.x86_64/google-chrome-beta-86.0.4240.30-1.x86_64.rpm >/dev/null && echo OK
-        - dnf install -y http://dist.control.lth.se/public/Fedora-31/x86_64/google.x86_64/google-chrome-beta-91.0.4472.19-1.x86_64.rpm  >/dev/null && echo OK
+        - dnf install -y https://dist.control.lth.se/public/Fedora-31/x86_64/google.x86_64/google-chrome-beta-91.0.4472.19-1.x86_64.rpm >/dev/null && echo OK
         - chown root /usr/bin/chromedriver >/dev/null && echo OK
         - chmod +x /usr/bin/chromedriver >/dev/null && echo OK
         - chmod 755 /usr/bin/chromedriver >/dev/null && echo OK
