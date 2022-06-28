@@ -17,13 +17,12 @@ Inserir Usuario
     Input Text    user-name    ${username}
     Capture Page Screenshot 
 Inserir Senha
-    [Arguments]     ${password}
+    [Arguments]     ${password}        ${filename}
     Input Text    user-password    ${password}
     Capture Page Screenshot
 Clicar no Botao para login
     [Arguments]     ${filename}
     Click Button    SendLogin
-    Capture Page Screenshot    filename=${filename}
 Validar se o usuario foi logado com sucesso
     [Arguments]     ${filename}
     Title Should Be    Bem vindo a Intercompany
