@@ -13,14 +13,13 @@ Abrir o navegador
     Capture Page Screenshot    filename=${filename}
 
 Inserir Usuario
-    [Arguments]     ${username}    ${filename}
+    [Arguments]     ${username}
     Input Text    user-name    ${username}
-    Capture Page Screenshot    filename=${filename}
-
+    Capture Page Screenshot 
 Inserir Senha
-    [Arguments]     ${password}    ${filename}
+    [Arguments]     ${password}
     Input Text    user-password    ${password}
-    Capture Page Screenshot    filename=${filename}
+    Capture Page Screenshot
 Clicar no Botao para login
     [Arguments]     ${filename}
     Click Button    SendLogin
