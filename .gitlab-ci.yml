@@ -38,7 +38,6 @@ WEB Testing in Chrome:
     script:
         - robot -d ./results -v BROWSER:headlesschrome intercompany_test.robot
 
-
 # # Job Docker - execução dos testes em container Docker
 # WEB Testing in Chrome and Docker:
 #     stage: Acceptance Tests
