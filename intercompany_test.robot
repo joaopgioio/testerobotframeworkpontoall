@@ -24,10 +24,10 @@ Caso de Teste 1 - Validar Login
     [Documentation]  Esse teste verifica se o usuário foi logado com sucesso
     ...              utilizando o usuário válido joao@gioio.com.br
     [Tags]           login
-    Inserir Usuario    ${username}
+    Inserir Usuario    ${username}        ${filename}
     Inserir Senha      ${password}        ${filename}
-    Clicar no Botao para login
-    Validar se o usuario foi logado com sucesso
+    Clicar no Botao para login        ${filename}
+    Validar se o usuario foi logado com sucesso        ${filename}
     # Welcome Page Should Be Open
     # [Teardown]    Close Browser
 

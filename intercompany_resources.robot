@@ -13,9 +13,9 @@ Abrir o navegador
     Capture Page Screenshot    filename=${filename}
 
 Inserir Usuario
-    [Arguments]     ${username}
+    [Arguments]     ${username}        ${filename}
     Input Text    user-name    ${username}
-    Capture Page Screenshot 
+    Capture Page Screenshot     ${filename}
 Inserir Senha
     [Arguments]     ${password}        ${filename}
     Input Text    user-password    ${password}
@@ -23,6 +23,7 @@ Inserir Senha
 Clicar no Botao para login
     [Arguments]     ${filename}
     Click Button    SendLogin
+    Capture Page Screenshot    filename=${filename}
 Validar se o usuario foi logado com sucesso
     [Arguments]     ${filename}
     Title Should Be    Bem vindo a Intercompany
