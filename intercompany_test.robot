@@ -25,7 +25,7 @@ Caso de Teste 1 - Validar Login
     ...              utilizando o usuário válido joao@gioio.com.br
     [Tags]           login
     Inserir Usuario    ${username}
-    Inserir Senha      ${password} 
+    Inserir Senha      ${password}
     Clicar no Botao para login
     Validar se o usuario foi logado com sucesso
     # Welcome Page Should Be Open
