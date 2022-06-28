@@ -17,7 +17,8 @@ WEB Testing in Chrome:
         - cat /etc/*-release
         - dnf upgrade -y >/dev/null && echo OK
         - dnf install -y python37 >/dev/null && echo OK
-        - dnf install -y chromedriver-stable >/dev/null && echo OK
+        - dnf install -y chromedriver-unstable >/dev/null && echo OK
+        #- dnf install -y chromedriver-stable >/dev/null && echo OK
         #- dnf install -y 'dnf-command(config-manager)' && dnf config-manager --set-enabled google-chrome
         #- dnf install -y google-chrome-stable
         # - pip3 install webdrivermanager  \ && webdrivermanager    chrome
@@ -25,6 +26,7 @@ WEB Testing in Chrome:
         # - dnf install -y https://kojipkgs.fedoraproject.org//vol/fedora_koji_archive04/packages/chromium/86.0.4240.111/1.fc31/x86_64/chrome-remote-desktop-86.0.4240.111-1.fc31.x86_64.rpm >/dev/null && echo OK
         # - dnf install -y http://dist.control.lth.se/public/Fedora-31/x86_64/google.x86_64/google-chrome-beta-86.0.4240.30-1.x86_64.rpm >/dev/null && echo OK
         - dnf install -y http://dist.control.lth.se/public/Fedora-31/x86_64/google.x86_64/google-chrome-beta-91.0.4472.19-1.x86_64.rpm >/dev/null && echo OK
+        https://www.apkmirror.com/apk/google-inc/chrome-beta/chrome-beta-86-0-4240-30-release/
         #- dnf install -y https://dist.control.lth.se/public/Fedora-31/x86_64/google.x86_64/google-chrome-beta-91.0.4472.19-1.x86_64.rpm >/dev/null && echo OK
         - chown root /usr/bin/chromedriver >/dev/null && echo OK
         - chmod +x /usr/bin/chromedriver >/dev/null && echo OK
