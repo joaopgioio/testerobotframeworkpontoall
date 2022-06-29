@@ -18,6 +18,7 @@ ${OPTIONS}      add_argument("--disable-dev-shm-usage"); add_argument("--headles
 ${username}        joao@gioio.com.br
 ${password}        123
 ${filename}        selenium-screenshot-{index}.png
+${full_name}       João Paulo Alves
 
 *** Test Cases ***
 Caso de Teste 1 - Validar Login
@@ -27,7 +28,7 @@ Caso de Teste 1 - Validar Login
     Inserir Usuario    ${username}        ${filename}
     Inserir Senha      ${password}        ${filename}
     Clicar no Botao para login        ${filename}
-    Validar se o usuario foi logado com sucesso        ${filename}
+    Validar se o usuario foi logado com sucesso        ${filename}    ${full_name} 
     # Welcome Page Should Be Open
     # [Teardown]    Close Browser
 

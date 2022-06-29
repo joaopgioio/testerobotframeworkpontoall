@@ -1,5 +1,6 @@
 *** Settings ***
-Library           SeleniumLibrary
+#Library           SeleniumLibrary
+Library           Selenium2Library
 Library           OperatingSystem
 
 
@@ -25,8 +26,13 @@ Clicar no Botao para login
     Click Button    SendLogin
     Capture Page Screenshot    filename=${filename}
 Validar se o usuario foi logado com sucesso
-    [Arguments]     ${filename}
-    Title Should Be    Bem vindo a Intercompany
+    [Arguments]                ${filename}    ${full_name}
+    Title Should Be            Bem vindo a Intercompany                 
+    Wait Until Page Contains Element     class=user-name
+    Wait Until Page Contains Element     class=user-status
+    Page Should Contain        Online
+    Page Should Contain        ${full_name}
+    Page Should Contain        Você acabou de acessar o novo sistema 
     Capture Page Screenshot    filename=${filename}
 Fechar o navegador
     Close Browser
