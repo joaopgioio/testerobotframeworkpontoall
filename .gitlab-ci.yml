@@ -16,7 +16,7 @@ WEB Testing in Chrome:
         # https://koji.fedoraproject.org/koji/buildinfo?buildID=1633929  -- Repositorio fedora onde encontrei algumas dependencias crhome
         - cat /etc/*-release
         - dnf upgrade -y >/dev/null && echo OK
-        - dnf install -y python37 >/dev/null && echo OK
+        - dnf install -y python38 >/dev/null && echo OK
         #- dnf install -y chromedriver-stable >/dev/null && echo OK
         - dnf install -y fedora-workstation-repositories >/dev/null && echo OK
         - dnf install -y 'dnf-command(config-manager)' >/dev/null && echo OK
