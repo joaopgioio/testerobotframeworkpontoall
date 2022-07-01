@@ -45,7 +45,7 @@ WEB Testing in Chrome:
         #- import setuptools tokenize >/dev/null && echo OK
         - pip3 install  --user -U robotframework | grep "Successfully installed"
         - pip3 install  --user -U robotframework-selenium2library | grep "Successfully installed"
-        - pip3 install  --user -U robotframework-seleniumlibrary | grep "Successfully installed"
+        #- pip3 install  --user -U robotframework-seleniumlibrary | grep "Successfully installed"
         - pip3 install  --user -U gcc7 | grep "Successfully installed"
     script:
         - robot -d ./results -v BROWSER:headlesschrome intercompany_test.robot
