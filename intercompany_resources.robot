@@ -47,6 +47,7 @@ No campo de pesquisa inserir a unidade de Tanabi
 Validar se os valores retornados
     [Arguments]       ${unidade}    ${cep}    ${logradouro}    ${numero}    ${complemento}    ${bairro}    ${cidade}   ${estado}    ${filename}
     #Table Cell Should Contain   //*[@class="table zero-configuration dataTable"]/tbody   1    1    ${unidade}
+    Sleep        15
     Wait Until Page Contains Element     //*[@class="table zero-configuration dataTable"]/tbody 
     Table Should Contain       //*[@class="table zero-configuration dataTable"]/tbody/tr   ${unidade}
     Table Should Contain       //*[@class="table zero-configuration dataTable"]/tbody    ${cep}
