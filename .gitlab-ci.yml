@@ -16,7 +16,7 @@ WEB Testing in Chrome:
         # https://koji.fedoraproject.org/koji/buildinfo?buildID=1633929  -- Repositorio fedora onde encontrei algumas dependencias crhome
         - cat /etc/*-release
         - dnf upgrade -y >/dev/null && echo OK
-        - dnf install -y python38 >/dev/null && echo OK
+        - dnf install -y python37 >/dev/null && echo OK
         #- dnf install -y chromedriver-stable >/dev/null && echo OK
         - dnf install -y fedora-workstation-repositories >/dev/null && echo OK
         - dnf install -y 'dnf-command(config-manager)' >/dev/null && echo OK
@@ -39,7 +39,7 @@ WEB Testing in Chrome:
         - chromedriver --version
         - google-chrome --version
         - python --version
-        - pip3 install -U -c robotframework robotframework-seleniumlibrary robotframework-selenium2library gcc | grep "Successfully installed"
+        - pip3 install -U robotframework robotframework-seleniumlibrary robotframework-selenium2library gcc7 | grep "Successfully installed"
     script:
         - robot -d ./results -v BROWSER:headlesschrome intercompany_test.robot
 
