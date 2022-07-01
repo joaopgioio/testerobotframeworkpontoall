@@ -41,10 +41,11 @@ WEB Testing in Chrome:
         - google-chrome --version
         - python --version
         - pip3 install --upgrade -vv setuptools >/dev/null && echo OK
+        - python -m pip install --upgrade pip >/dev/null && echo OK
         - import setuptools tokenize >/dev/null && echo OK
         - pip3 install -U robotframework | grep "Successfully installed"
-        - pip3 install robotframework-seleniumlibrary | grep "Successfully installed"
-        - pip3 install robotframework-selenium2library | grep "Successfully installed"
+        - pip3 install -U robotframework-selenium2library | grep "Successfully installed"
+        - pip3 install -U robotframework-seleniumlibrary | grep "Successfully installed"
         - pip3 install gcc7 | grep "Successfully installed"
     script:
         - robot -d ./results -v BROWSER:headlesschrome intercompany_test.robot
