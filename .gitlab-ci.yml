@@ -39,7 +39,7 @@ WEB Testing in Chrome:
         - chromedriver --version
         - google-chrome --version
         - python --version
-        - pip3 install robotframework robotframework-seleniumlibrary robotframework-selenium2library | grep "Successfully installed"
+        - pip3 install --user robotframework robotframework-seleniumlibrary robotframework-selenium2library | grep "Successfully installed"
     script:
         - robot -d ./results -v BROWSER:headlesschrome intercompany_test.robot
 
