@@ -1,5 +1,5 @@
-# stages:
-#   - Acceptance Tests 
+stages:
+  - Acceptance Tests 
 
 # # Job Linux Fedora - execução dos testes sem docker
 # WEB Testing in Chrome:
@@ -30,6 +30,7 @@
 #         - pip3 install  --user --upgrade -vv setuptools >/dev/null && echo OK
 #         - python -m pip install  --user --upgrade pip >/dev/null && echo OK
 #         - pip3 install  robotframework  robotframework-selenium2library | grep "Successfully installed"
+
 #     script:
 #         - robot -d ./results -v BROWSER:headlesschrome intercompany_test.robot
 
