@@ -48,7 +48,7 @@ Validar se os valores retornados
     [Arguments]       ${unidade}    ${cep}    ${logradouro}    ${numero}    ${complemento}    ${bairro}    ${cidade}   ${estado}    ${filename}
     #Table Cell Should Contain   //*[@class="table zero-configuration dataTable"]/tbody   1    1    ${unidade}
     Wait Until Page Contains Element     //*[@class="table zero-configuration dataTable"]/tbody 
-    Table Should Contain       //*[@class="table zero-configuration dataTable"]/tbody    ${unidade}
+    Table Should Contain       //*[@class="table zero-configuration dataTable"]/tbody/tr   ${unidade}
     Table Should Contain       //*[@class="table zero-configuration dataTable"]/tbody    ${cep}
     Table Should Contain       //*[@class="table zero-configuration dataTable"]/tbody    ${logradouro}
     Table Should Contain       //*[@class="table zero-configuration dataTable"]/tbody    ${numero}
