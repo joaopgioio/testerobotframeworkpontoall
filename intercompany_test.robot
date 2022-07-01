@@ -19,6 +19,14 @@ ${username}        joao@gioio.com.br
 ${password}        123
 ${filename}        selenium-screenshot-{index}.png
 ${full_name}       João Paulo Alves
+${unidade}         Tanabi
+${cep}             15170970
+${logradouro}      Rua Barão do Rio Branco
+${numero}          331
+${complemento}     Lote B
+${bairro}          Centro     
+${cidade}          Tanabi
+${estado}          SP
 
 *** Test Cases ***
 Caso de Teste 1 - Validar Login
@@ -31,6 +39,18 @@ Caso de Teste 1 - Validar Login
     Validar se o usuario foi logado com sucesso        ${filename}    ${full_name} 
     # Welcome Page Should Be Open
     # [Teardown]    Close Browser
+
+Caso de Teste 2 - Consultar unidades
+    [Documentation]  Esse teste faz a consulta de unidades
+    ...              utilizando o usuário logado válido joao@gioio.com.br
+    [Tags]           consulta unidade
+    Inserir Usuario    ${username}      ${filename}
+    Inserir Senha      ${password}      ${filename}
+    Clicar no Botao para login          ${filename}
+    Clicar em listar unidade    ${filename} 
+    No campo de pesquisa inserir a unidade de Tanabi    ${unidade}    ${filename} 
+    Validar se os valores retornados    ${unidade}    ${cep}    ${logradouro}    ${numero}    ${complemento}    ${bairro}    ${cidade}    ${estado}        ${filename}   
+
 
 # Inserir Usuario
 #     [Arguments]    ${username}
