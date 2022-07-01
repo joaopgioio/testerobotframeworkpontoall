@@ -18,6 +18,7 @@ WEB Testing in Chrome:
         - dnf upgrade -y >/dev/null && echo OK
         - dnf install -y python37 >/dev/null && echo OK
         - dnf install -y python39 >/dev/null && echo OK
+        -- python3.9 -m pip install --upgrade --force-reinstall pip
         #- dnf install -y chromedriver-stable >/dev/null && echo OK
         - dnf install -y fedora-workstation-repositories >/dev/null && echo OK
         - dnf install -y 'dnf-command(config-manager)' >/dev/null && echo OK
@@ -41,7 +42,7 @@ WEB Testing in Chrome:
         - google-chrome --version
         - python --version
         - pip3 install  --user --upgrade -vv setuptools >/dev/null && echo OK
-        - python -m pip install  --user --upgrade pip >/dev/null && echo OK
+        - python3.9 -m pip install  --user --upgrade pip >/dev/null && echo OK
         #- import setuptools tokenize >/dev/null && echo OK
         - pip3 install  --user -U robotframework | grep "Successfully installed"
         - pip3 install  --user -U robotframework-selenium2library | grep "Successfully installed"
