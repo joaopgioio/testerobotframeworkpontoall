@@ -1,0 +1,49 @@
+stages:
+  - Acceptance Tests 
+
+# # Job Linux Fedora - execução dos testes sem docker
+# WEB Testing in Chrome:
+#     stage: Acceptance Tests
+#     image: fedora:31
+#     tags:
+#         - docker
+#     artifacts:
+#         when: always
+#         paths:
+#             - ./results
+#         expire_in: 1 week
+#     before_script:
+#         # https://koji.fedoraproject.org/koji/buildinfo?buildID=1633929  -- Repositorio fedora onde encontrei algumas dependencias crhome
+#         - cat /etc/*-release
+#         - dnf upgrade -y >/dev/null && echo OK
+#         - dnf install -y python37 >/dev/null && echo OK
+#         - python -m pip install --upgrade --force-reinstall pip
+#         - dnf install -y fedora-workstation-repositories >/dev/null && echo OK
+#         - dnf install -y 'dnf-command(config-manager)' >/dev/null && echo OK
+#         - dnf config-manager --set-enabled google-chrome >/dev/null && echo OK
+#         - dnf install -y google-chrome-stable >/dev/null && echo OK
+#         - pip3 install webdrivermanager >/dev/null && echo OK
+#         - webdrivermanager chrome >/dev/null && echo OK
+#         - chromedriver --version
+#         - google-chrome --version
+#         - python --version
+#         - pip3 install  --user --upgrade -vv setuptools >/dev/null && echo OK
+#         - python -m pip install  --user --upgrade pip >/dev/null && echo OK
+#         - pip3 install  robotframework  robotframework-selenium2library | grep "Successfully installed"
+
+#     script:
+#         - robot -d ./results -v BROWSER:headlesschrome intercompany_test.robot
+
+# Job Docker - execução dos testes em container Docker
+WEB Testing in Chrome and Docker:
+    stage: Acceptance Tests
+    image: registry.gitlab.com/joaopgioio/mydockerimages:latest
+    tags:
+        - docker
+    artifacts:
+        when: always
+        paths:
+            - ./results
+        expire_in: 1 week
+    script:
+        - robot -d ./results -v BROWSER:headlesschrome intercompany_test.robot
