@@ -56,7 +56,7 @@ Clicar no Botao para pesquisar professor
 Validar Cadastro Professor    
     [Arguments]    ${nome}    ${matricula}    ${materia}     ${filename}
     Page Should Contain    Professores
-    sleep     5
+    sleep     10
     Wait Until Page Contains Element     //*[@class="table table-striped table-bordered table-hover"]/tbody
     Table Should Contain       //*[@class="table table-striped table-bordered table-hover"]/tbody   ${nome}
     Table Should Contain       //*[@class="table table-striped table-bordered table-hover"]/tbody   ${materia}
