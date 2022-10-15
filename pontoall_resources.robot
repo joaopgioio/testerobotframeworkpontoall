@@ -15,7 +15,6 @@ Abrir o navegador
 
 Clicar no Botao para cadastrar professor
     [Arguments]        ${filename}
-    Wait Until Element Is Visible    title
     Title Should Be    PontoAll - Registro de Ponto
     Click Link        link=Sistema
     Click Link        link=Cadastrar Professor
@@ -49,7 +48,6 @@ Clicar no Botao para Salvar
 
 Clicar no Botao para pesquisar professor
     [Arguments]        ${filename}
-    Title Should Be    PontoAll - Registro de Ponto
     Click Link        link=Sistema
     Click Link        link=Professores
     Capture Page Screenshot    filename=${filename}
