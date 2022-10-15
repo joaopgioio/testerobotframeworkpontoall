@@ -15,6 +15,7 @@ Abrir o navegador
 
 Clicar no Botao para cadastrar professor
     [Arguments]        ${filename}
+    Wait Until Element Is Visible    title
     Title Should Be    PontoAll - Registro de Ponto
     Click Link        link=Sistema
     Click Link        link=Cadastrar Professor
