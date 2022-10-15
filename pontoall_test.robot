@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     Esse é o teste para o site da intercompany
+Documentation     Esse é o teste para o site da PontoAll
 Resource          pontoall_resources.robot
 Test Setup        Abrir o navegador    ${LOGIN URL}     ${BROWSER}    ${OPTIONS}    ${filename}
 Test Teardown     Fechar o navegador

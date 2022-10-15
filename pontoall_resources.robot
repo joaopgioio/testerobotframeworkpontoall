@@ -63,6 +63,5 @@ Validar Cadastro Professor
     Table Should Contain       //*[@class="table table-striped table-bordered table-hover"]/tbody   ${matricula}
     Capture Page Screenshot    filename=${filename}
 
-
 Fechar o navegador
     Close Browser
