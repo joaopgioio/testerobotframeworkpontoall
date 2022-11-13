@@ -46,5 +46,5 @@ WEB Testing in Chrome and Docker:
             - ./results
         expire_in: 1 week
     script:
-        - robot -d ./results -v BROWSER:headlesschrome pontoall_test.robot
+        - oall_test.robotrobot -d ./results -v BROWSER:headlesschrome pont
         
