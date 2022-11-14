@@ -1,6 +1,6 @@
 *** Settings ***
-#Library           SeleniumLibrary
-Library           Selenium2Library
+Library           SeleniumLibrary
+#Library           Selenium2Library
 Library           OperatingSystem
 
 
