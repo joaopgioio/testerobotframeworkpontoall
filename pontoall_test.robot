@@ -9,7 +9,7 @@ Test Teardown     Fechar o navegador
 
 *** Variables ***
 #${LOGIN URL}      http://localhost:3000/intercompany/index.php
-${LOGIN URL}       https://pontoall-frontend.vercel.app/
+${LOGIN URL}       https://pontoall-front.vercel.app/
 ${BROWSER}         chrome
 #${NAVEGADOR_CHROMEHEADLESS}     headlesschrome
 ### Opções necessárias para rodar headless no Linux do CI (runner)
