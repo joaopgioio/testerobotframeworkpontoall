@@ -38,3 +38,12 @@ Caso de Teste 2 - Validar cadastro de Professor
     [Tags]           Validar Cadastro Professor
     Clicar no Botao para pesquisar professor    ${filename}
     Validar Cadastro Professor    ${nome}    ${matricula}    ${materia}     ${filename}
+
+Caso de Teste 3 - Registrar ponto
+    [Documentation]  Esse teste efetua o registro de ponto
+    ...              informando alguns dados
+    [Tags]           Registro Ponto
+    Clicar no Botao para registrar ponto    ${filename}
+    Inserir Matricula    ${matricula}        ${filename}
+    Inserir Senha    ${password}        ${filename}
+    Clicar no Botao para Registrar    ${filename}

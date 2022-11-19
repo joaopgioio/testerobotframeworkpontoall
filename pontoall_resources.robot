@@ -20,6 +20,13 @@ Clicar no Botao para cadastrar professor
     Click Link        link=Cadastrar Professor
     Capture Page Screenshot    filename=${filename}
 
+Clicar no Botao para registrar ponto
+    [Arguments]        ${filename}
+    Title Should Be    PontoAll - Registro de Ponto
+    Click Link        link=Sistema
+    Click Link        link=Registrar Ponto
+    Capture Page Screenshot    filename=${filename}
+
 Inserir Nome
     [Arguments]     ${nome}        ${filename}
     Input Text    nome    ${nome}
@@ -43,6 +50,12 @@ Inserir Senha
 Clicar no Botao para Salvar
     [Arguments]     ${filename}
     Click Button        salvar
+    sleep     5
+    Capture Page Screenshot        ${filename}
+
+Clicar no Botao para Registrar
+    [Arguments]     ${filename}
+    Click Button        registrar
     sleep     5
     Capture Page Screenshot        ${filename}
 
