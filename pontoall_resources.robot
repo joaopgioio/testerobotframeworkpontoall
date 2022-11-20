@@ -55,7 +55,7 @@ Clicar no Botao para Salvar
 
 Clicar no Botao para Registrar
     [Arguments]     ${filename}
-    Click Button        registrar
+    Click Button        Registrar
     sleep     5
     Capture Page Screenshot        ${filename}
 
