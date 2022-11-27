@@ -15,10 +15,10 @@ ${BROWSER}         chrome
 ### Opções necessárias para rodar headless no Linux do CI (runner)
 ${OPTIONS}      add_argument("--disable-dev-shm-usage"); add_argument("--headless"); add_argument("--no-sandbox")
 #${chromedriver}    executable_path=./106/chromedriver.exe  
-${nome}            Brasil
+${nome}            Olavo de Carvalho
 ${matricula}       1234
-${materia}        artes
-${password}        123
+${materia}         filosofia
+${password}        1234
 ${filename}        selenium-screenshot-{index}.png
 
 *** Test Cases ***
